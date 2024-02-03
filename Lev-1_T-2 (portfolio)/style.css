@@ -15,7 +15,6 @@ body,
 }
 
 .nav-bar {
-    /* background-color: aqua; */
     height: 50px;
     display: flex;
     padding: 70px 30px;
@@ -35,14 +34,9 @@ body,
     text-shadow: 0px 0px 60px rgb(216, 243, 12);
     color: yellow;
 }
-
-/* 
-
-
-*/
 .menu {
     display: flex;
-    gap: 100px;
+    gap: 80px;
     position: relative;
     right: 180px;
     font-size: 20px;
@@ -52,13 +46,31 @@ body,
     color: aliceblue;
     font-family: 'Poppins', sans-serif;
     border-bottom: 2px solid transparent;
+    position: relative;
+    padding: 0px 10px 0px 10px;
+    transition: 0.2s linear;
 }
 
-.menu a:hover {
-    border-bottom:  2px solid rgb(4, 159, 210);
+
+.menu a:before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 0%;    
+    border-bottom:  2px solid rgba(4, 159, 210, 0.717);
+}
+.menu a:hover:before{
     transition: 0.2s linear;
     text-shadow: 1px 1px 20px aqua;
+    width: 100%;
 }
+
+.menu a:hover{
+    text-shadow: 1px 1px 20px rgb(233, 237, 237);
+}
+
+
 
 .hero {
     /* border: 2px solid white; */
